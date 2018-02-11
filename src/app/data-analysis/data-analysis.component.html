@@ -1,0 +1,101 @@
+<div class="row">
+	<div class="col-2 col-sm-2 side-bar left-section">
+		<!-- **************************** Collapseble Sidebar **************************** -->
+		<div id="content">
+			<button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn" (click)="toggleSidebar(sidebar.value)">
+				<i class="fa fa-bars"></i>
+			</button>
+		</div>
+		<nav #sidebar id="sidebar">
+			<ul class="list-unstyled components">
+				<li class="">
+					<a href="#">Scope</a>
+				</li>
+				<li>
+					<a href="#">Overview</a>
+				</li>
+				<li>
+					<!-- Link with dropdown items -->
+					<a href="#submenu" data-toggle="collapse" aria-expanded="true">Dynamics
+						<i class="fa fa-caret-down" style="margin-left: 25px;"></i>
+					</a>
+					<ul class="collapse list-unstyled show" id="submenu">
+						<li class="active">
+							<a href="#">Drivers</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Restraints</a>
+				</li>
+				<li>
+					<a href="#">Opportunities</a>
+				</li>
+				<li>
+					<a href="#">Porter's 5 Forces</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="col-10 col-sm-10 right-section">
+		<article>
+			<div class="card">
+				<div class="card-header">
+					Drivers
+				</div>
+				<div class="card-body" id="custom-scrollbar">
+					<div class="fig-1 row">
+						<div class="col-12 col-sm-12 col-md-12 col-lg-6 text-content">
+							<h5 class="card-title">Lorem ipsum dolor sit amet</h5>
+							<p class="card-text">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+								penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+								eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+								arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+								Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+								porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+								Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+								Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus,
+								sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
+								id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis
+								ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+								sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.
+							</p>
+						</div>
+						<div class="col-12 col-sm-12 col-md-12 col-lg-6 graphical-content">
+							<div style="display: block; margin-top: 29px;">
+								<p>Fig 1: Donec quam felis, ultricies nec</p>
+								<canvas baseChart [data]="doughnutChartData1" [labels]="doughnutChartLabels1" [chartType]="doughnutChartType1" (chartHover)="chartHovered($event)"
+								 [options]="doughnutChartOptions1" (chartClick)="chartClicked($event)"></canvas>
+								<p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.</p>
+							</div>
+						</div>
+					</div>
+					<div class="fig-2 row" style="margin-top:5%">
+						<div class="col-12 col-sm-12 col-md-12 col-lg-6 text-content">
+							<h5 class="card-title">Nulla consequat massa quis enim</h5>
+							<p class="card-text">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+								penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+								eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+								arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+								Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+								porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+								Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+								Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus.
+							</p>
+						</div>
+						<div class="col-12 col-sm-12 col-md-12 col-lg-6 graphical-content">
+							<div style="display: block; margin-top: 29px;">
+								<p>Fig 2: Phasellus viverra nulla ut metus varius laoreet</p>
+								<canvas baseChart [data]="doughnutChartData2" [labels]="doughnutChartLabels2" [chartType]="doughnutChartType2" (chartHover)="chartHovered($event)"
+								 (chartClick)="chartClicked($event)"></canvas>
+								<p>Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+	</div>
+</div>

@@ -1,0 +1,74 @@
+<div class="row">
+	<div class="col-2 col-sm-2 side-bar left-section">
+		<!-- **************************** Collapseble Sidebar **************************** -->
+		<div id="content">
+			<button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn" (click)="toggleSidebar(sidebar.value)">
+				<i class="fa fa-bars"></i>
+			</button>
+		</div>
+		<nav #sidebar id="sidebar">
+			<ul class="list-unstyled components">
+				<li class="">
+					<a href="#">Novus</a>
+				</li>
+				<li>
+					<a href="#">Overview</a>
+				</li>
+
+				<li class="active">
+					<a href="#">Revenues
+					</a>
+				</li>
+				<li>
+					<a href="#">SWOT Analysis</a>
+				</li>
+				<li>
+					<a href="#">Strategies</a>
+				</li>
+				<li>
+					<a href="#">Products</a>
+				</li>
+				<li>
+					<a href="#">Competitors</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="col-10 col-sm-10 right-section">
+		<article>
+			<div class="card">
+				<div class="card-header">
+					Revenues
+				</div>
+				<div class="card-body" id="custom-scrollbar">
+					<div class="row">
+						<div class="col-12 col-sm-12 col-md-12 col-lg-6 fig-1">
+							<div style="display: block;">
+								<h5 class="card-title">Fig 1: Donec quam felis, ultricies nec</h5>
+								<canvas baseChart [data]="doughnutChartData1" [labels]="doughnutChartLabels1" [chartType]="doughnutChartType1" (chartHover)="chartHovered($event)"
+								 [options]="doughnutChartOptions1" (chartClick)="chartClicked($event)"></canvas>
+								<p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.</p>
+							</div>
+						</div>
+						<div class="col-12 col-sm-12 col-md-12 col-lg-6 fig-2">
+							<div style="display: block;">
+								<h5 class="card-title">Fig 2: Donec quam felis, ultricies nec</h5>
+								<canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+								 [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+								<p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.</p>
+							</div>
+						</div>
+						<div class="col-12 col-sm-12 col-md-12 col-lg-6 fig-3">
+							<div style="display: block;">
+								<h5 class="card-title">Fig 3: Donec quam felis, ultricies nec</h5>
+								<canvas baseChart [data]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [chartType]="lineChartType" (chartHover)="chartHovered($event)"
+								 (chartClick)="chartClicked($event)"></canvas>
+								<p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+	</div>
+</div>
